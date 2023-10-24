@@ -3,7 +3,7 @@
 <div id="kv">
   <div class="in_kv">
     <picture class="kv_bg">
-      <source media="(max-width: 767px)" srcset="<?= get_template_directory_uri() ?>/img/sample.jpg"> <img src="<?= get_template_directory_uri() ?>/img/kv_bg.jpg">
+      <source media="(max-width: 767px)" srcset="<?= get_template_directory_uri() ?>/img/sample_heroimage.png"> <img src="<?= get_template_directory_uri() ?>/img/sample_heroimage.png">
     </picture>
   </div>
   
