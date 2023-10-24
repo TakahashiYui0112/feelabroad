@@ -1,0 +1,119 @@
+@charset "UTF-8";
+/*----------------------------
+/共通CSS(PC,SP共通)
+/複数ページに存在するパーツはすべてここに記載
+/*----------------------------*/
+
+/*html5reset-1.6.1.min.css
+-------------------------------*/
+
+h1,h5,ul,li,p,div,dl,dt,dd,nav,footer,a,header{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent}
+body{line-height:1}
+
+nav#slide_menu a:hover,
+footer#downfooter ul.nav a:hover{
+    color: #4052E3 !important;
+}
+
+.photo_txt{
+    position: relative;
+    width: 145px;
+}
+.photo_txt .small{
+    position: relative;
+    width: 88px;
+}
+.photo_txt p.dep{
+    position: absolute;
+    top: 30%;
+    left: 0;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+
+}
+.photo_txt p.arr{
+    position: absolute;
+    bottom: 30%;
+    left: 0;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.photo_txt p.small {
+    font-size: 12px;
+}
+
+div.accshow {
+    display: none;
+}
+.cssacc:checked ~ div.accshow {
+    display: block;
+}
+
+div.column ul.deco{
+    margin-top: 1em;
+    list-style: none;
+}
+div.column ul.deco li{
+    color: #A52A2A;
+    font-weight: normal;
+    font-size: 14px;
+    font-size: 1.4rem;
+    margin: 0.5em 0;
+    text-indent:-1em;
+    padding-left:1em;
+}
+
+.txt-confirm-goods{
+    color: #525263;
+    font-size: 14px;
+}
+
+.show__order_hermes {
+    display: flex; /* flexbox */
+    flex-wrap: wrap; /* 折返し指定 */
+}
+
+.show__body_hermes,.show__head_hermes  {
+    width: 50%;
+}
+
+
+@media only screen and (max-width: 767px) {
+.photo_txt{
+    max-width: 88px;
+    min-width: 70px;
+    width: 14.5vw;
+}
+.photo_txt .small{
+    max-width: 88px;
+    min-width: 70px;
+    width: 14.5vw;
+}
+.photo_txt p.dep{
+    font-size: 2vw;
+    font-weight: normal;
+}
+.photo_txt p.arr{
+    font-size: 2vw;
+    font-weight: normal;
+}
+.txt-confirm-goods{
+    font-size: 2.3vw;
+}
+
+.show__order_hermes {
+    display: flex; /* flexbox */
+    flex-wrap: wrap; /* 折返し指定 */
+}
+
+.show__body_hermes,.show__head_hermes {
+    width: 100%;
+}
+
+}
+
+/*リセットCSS上書きなど基本設定
+-------------------------------*/
