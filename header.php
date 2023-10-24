@@ -20,7 +20,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
   <?php endif ?>
-  <link rel="stylesheet" href="http://3.115.140.108/css/app.css">
+  <!-- hermesを動かしたいのであれば、↓下記の記述を非表示にするか、CSSを上書きする -->
+  <!-- <link rel="stylesheet" href="http://3.115.140.108/css/app.css"> -->
   <script src="http://3.115.140.108/js/rendering.js">
   </script>
   <link rel="stylesheet" media="screen and (min-width: 768px)" href="<?= get_template_directory_uri() ?>/css/style_pc.css">
@@ -30,6 +31,7 @@
   <meta name="author" content="株式会社 ドリームエクスチェンジ">
   <meta name="description" content="新幹線・JR特急列車きっぷ予約サイト。みどりの窓口に並はず買ったきっぷはご自宅や職場へお届け。">
   <meta name="keywords" content="新幹線,JR,feelabroad">
+  <script src="<?= get_template_directory_uri() ?>/js/hamburger.js"></script>
 </head>
 <?php wp_head() ?>
 <!-- ▼BODY部 スタート -->
@@ -42,49 +44,49 @@
         <div class="in_header">
           <h1 id="logo"><a href="<?= home_url() ?>">
               <!-- <img src="<?= get_template_directory_uri() ?>/img/logo.png" alt=""> -->
-              <img src="<?= get_template_directory_uri() ?>/img/logo_aside.png" alt="新幹線・特急列車 チケットのかんたん予約サイト">
+              <img src="<?= get_template_directory_uri() ?>/img/logo_aside2.png" alt="新幹線・特急列車 チケットのかんたん予約サイト">
             </a></h1>
           <div id="side_button"><span></span><span></span><span></span></div>
           <nav id="slide_menu">
             <a href="<?= home_url('/guide/') ?>">
               <dl>
-                <dt><img src="<?= get_template_directory_uri() ?>/img/ico_guide.png" alt="ご利用ガイド"></dt>
+                <dt><img src="<?= get_template_directory_uri() ?>/img/guidence.png" alt="ご利用ガイド"></dt>
                 <dd>ご利用ガイド</dd>
               </dl>
             </a>
             <a href="<?= home_url('/payment-info/') ?>">
               <dl>
-                <dt><img src="<?= get_template_directory_uri() ?>/img/ico_pay.png" alt="お支払い方法"></dt>
+                <dt><img src="<?= get_template_directory_uri() ?>/img/payment_ico.png" alt="お支払い方法"></dt>
                 <dd>お支払い方法</dd>
               </dl>
             </a>
             <a href="<?= home_url('/cancel/') ?>">
               <dl>
-                <dt><img src="<?= get_template_directory_uri() ?>/img/ico_cancel.png" alt="キャンセル"></dt>
+                <dt><img src="<?= get_template_directory_uri() ?>/img/batsu_m.png" alt="キャンセル"></dt>
                 <dd>キャンセル</dd>
               </dl>
             </a>
             <a href="<?= home_url('/faq/') ?>">
               <dl>
-                <dt><img src="<?= get_template_directory_uri() ?>/img/ico_qa.png" alt="Q&amp;A"></dt>
+                <dt><img src="<?= get_template_directory_uri() ?>/img/hatena_m.png" alt="Q&amp;A"></dt>
                 <dd>Q&amp;A</dd>
               </dl>
             </a>
             <a href="<?= home_url('/cart/') ?>">
               <dl style="position: relative">
-                <dt><img src="<?= get_template_directory_uri() ?>/img/ico_cart.png" alt="お買い物かご"></dt>
+                <dt><img src="<?= get_template_directory_uri() ?>/img/cart_m.png" alt="お買い物かご"></dt>
                 <dd>お買い物かご</dd>
                 <span class="cart__count_hermes"></span>
               </dl>
             </a>
             <a type="button" id="login_link">
               <dl>
-                <dt><img src="<?= get_template_directory_uri() ?>/img/ico_user.png" alt="ログイン"></dt>
+                <dt><img src="<?= get_template_directory_uri() ?>/img/login_m.png" alt="ログイン"></dt>
                 <dd>ログイン</dd>
               </dl>
             </a>
           </nav>
-          <div class=" cart_sp">
+          <!-- <div class=" cart_sp">
             <a href="<?= home_url('/cart/') ?>">
               <dl style="position: relative">
                 <dt><img src="<?= get_template_directory_uri() ?>/img/ico_cart.png" alt="お買い物かご"></dt>
@@ -92,7 +94,7 @@
                 <span class="cart__count_hermes"></span>
               </dl>
             </a>
-          </div>
+          </div> -->
         </div>
       </header>
       <div class="layer"></div>

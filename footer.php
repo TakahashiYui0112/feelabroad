@@ -10,7 +10,7 @@
                 <div class="in_bdy">
                     <h5>運営：株式会社ドリームエクスチェンジ</h5>
                     <div class="address">
-                        <p>東京都千代田区神田神保町2丁目4-7 久月神田ビル5階</p>
+                        <p class="footer_address">東京都千代田区神田神保町2丁目4-7 久月神田ビル5階</p>
                         <p>Tel. 03-6256-9080</p>
                     </div>
                 </div>

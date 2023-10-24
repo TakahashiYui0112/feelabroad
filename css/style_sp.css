@@ -16,10 +16,10 @@ img{
   position: absolute;
   width: 16vw;
   height: 15vw;
-  top: 1vw;
+  /* top: 1vw; */
   right:0;
   z-index:1002;
-  background: #3749df;
+  background: #00552e;
 }
 #side_button.active{
   right:62%;
@@ -54,7 +54,57 @@ img{
   transform: translateY(-3vw) rotate(45deg);
 }
 header{
-  border-bottom: 1.5vw solid #3749df;
+  border-bottom: 1.5vw solid #00552e;
+}
+/* ハンバーガーメニューボタンのスタイル */
+#side_button {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
+  /* background-color: transparent; */
+  border: none;
+  z-index: 999; /* 必要に応じてz-indexを設定して重なりを調整 */
+  margin-right: 1%;
+  margin-bottom: 1%;
+}
+/* メニューのスタイル（初期状態では非表示） */
+#slide_menu {
+  display: none;
+  position: absolute;
+  top: 109px; /* メニューの表示位置を調整 */
+  right: 0;
+  background-color: #fff; /* メニューの背景色 */
+  width: 200px; /* メニューの幅 */
+  padding: 10px;
+  z-index: 998; /* メニューがボタンの下に表示されるように設定 */
+}
+
+/* メニュー内のリンクのスタイル */
+#slide_menu a {
+  display: block;
+  padding: 10px 0;
+  color: #333; /* リンクの文字色 */
+  text-decoration: none;
+  font-size: 16px; /* リンクのフォントサイズ */
+  transition: color 0.3s; /* リンクの色のアニメーション */
+}
+
+/* メニューが表示されたときのリンクのスタイル */
+#slide_menu.active {
+  display: block;
+}
+
+/* メニュー内のリンクのホバースタイル */
+#slide_menu a:hover {
+  color: #555; /* ホバー時の文字色 */
+}
+#side_button span {
+  /* width: 30px; */
+  height: 3px;
+  background-color: #fff; /* バーの色 */
+  margin: 1px 0; /* バー間の間隔 */
+  transition: 0.4s; /* アニメーションのスピード */
 }
 header .in_header{
   width: 100%;
@@ -508,9 +558,9 @@ footer ul{
   justify-content: center;
 }
 footer ul li{
-  line-height: 1.2;
+  line-height: 0.2;
   padding: 0 1.5vw;
-  border-right: 1px solid #4052e3;
+  border-right: 1px solid #00552e;
   font-size: 2.4vw;
 }
 footer ul li:last-child{
@@ -518,12 +568,13 @@ footer ul li:last-child{
 }
 footer ul li a{
   line-height: 1;
-  color: #4052e3;
+  color: #00552e;
   text-decoration: none;
+  font-size: 11px;
 }
 footer .footer_bottom{
   margin-top: 2vw;
-  background: #4052e3;
+  background: #00552e;
   padding: 4vw 0 4vw;
   text-align: center;
   color: #fff;
@@ -537,6 +588,9 @@ footer .footer_bottom .address{
   line-height: 1.6;
   font-size: 3.5vw;
   margin-bottom: 4vw;
+}
+.footer_address{
+  font-size: 4vw;
 }
 footer .footer_bottom .copyright{
   font-size: 2.5vw;
@@ -806,7 +860,7 @@ index
 }
 #info .in_bdy h2{
   font-size: 5vw;
-  color: #4052E3;
+  color: #00552e;
   margin-bottom: 4vw;
   font-weight: normal;
 }
@@ -847,7 +901,7 @@ index
 }
 #info .in_bdy .info_list .more a{
   text-decoration: none;
-  color: #4052E3;
+  color: #00552e;
 }
 #info .in_bdy .info_list .more a:hover{
   text-decoration: underline;
@@ -862,7 +916,7 @@ index
 }
 #topic .in_bdy h2{
   font-size: 5vw;
-  color: #4052E3;
+  color: #00552e;
   margin-bottom: 4vw;
   font-weight: normal;
 }
@@ -919,7 +973,7 @@ faq
 }
 #faq h2 {
   font-size: 5vw;
-  color: #4052E3;
+  color: #00552e;
   margin-bottom: 4vw;
   font-weight: normal;
 }
@@ -928,8 +982,8 @@ faq
 }
 #faq .faq_list dl dt{
   font-size: 5vw;
-  background: #ECEEFD;
-  color: #4052E3;
+  background: #E6FFE9	;
+  color: #00552e;
   border-radius: 1vw;
   padding: 3vw;
   margin-bottom: 3vw;
@@ -953,7 +1007,7 @@ faq
 #faq .faq_list dl dd table th{
   font-size: 4.5vw;
   font-weight: normal;
-  background: #ECEEFD;
+  background: #E6FFE9;
 }
 #faq .faq_list dl dd table tr td:last-child{
   text-align: center;
@@ -972,7 +1026,7 @@ faq
   width: 100%;
 }
 #faq .contact_box{
-  background: #ECEEFD;
+  background: #E6FFE9;
   margin: 10vw auto 0;
   width: 100%;
   padding: 3vw;
@@ -982,7 +1036,7 @@ faq
   font-weight: normal;
   font-size: 4.5vw;
   margin-bottom: 3vw;
-  color: #4052E3;
+  color: #00552e;
   text-align: center;
 }
 #faq .contact_box dl{
@@ -990,12 +1044,12 @@ text-align: center;
 }
 #faq .contact_box dl dt{
   font-size: 8vw;
-  color: #4052E3;
+  color: #00552e;
   margin-bottom: 2vw;
 }
 #faq .contact_box dl dd{
   font-size: 3vw;
-  color: #4052E3;
+  color: #00552e
   line-height: 1.4;
 }
 
@@ -1069,7 +1123,7 @@ cancel
 }
 #cancel h2 {
   font-size: 5vw;
-  color: #4052E3;
+  color: #00552e;
   margin-bottom: 3vw;
   font-weight: normal;
 }
@@ -1087,8 +1141,8 @@ cancel
 }
 #cancel dl dt{
   font-size: 5vw;
-  background: #ECEEFD;
-  color: #4052E3;
+  background: #E6FFE9;
+  color: #00552e;
   border-radius: 1vw;
   padding: 3vw;
   margin-bottom: 3vw;
@@ -1097,7 +1151,7 @@ cancel
   margin-bottom: 3vw;
 }
 #cancel dl dd .box{
-  border: 1.5vw solid #ECEEFD;
+  border: 1.5vw solid #E6FFE9;
   margin-bottom: 6vw;
   border-radius: 1vw;
   padding: 5vw;
@@ -1126,7 +1180,7 @@ cancel
 #cancel dl dd .box table th{
   font-size: 4.5vw;
   font-weight: normal;
-  background: #ECEEFD;
+  background: #E6FFE9;
 }
 /*===========================
 
@@ -1146,7 +1200,7 @@ company
 }
 #company h2 {
   font-size: 5vw;
-  color: #4052E3;
+  color: #00552e;
   margin-bottom: 3vw;
   font-weight: normal;
 }
@@ -1163,7 +1217,7 @@ company
 #company table th{
   text-align: center;
   font-weight: normal;
-  background: #ECEEFD;
+  background: #E6FFE9;
 }
 /*===========================
 
@@ -1220,7 +1274,7 @@ privacypolicy
 }
 #privacypolicy h2 {
   font-size: 5vw;
-  color: #4052E3;
+  color: #00552e;
   margin-bottom: 3vw;
   font-weight: normal;
 }
@@ -1312,7 +1366,7 @@ guide
 }
 #guide a{
   text-decoration: none;
-  color: #4052E3;
+  color: #00552e;
 }
 #guide a:hover{
   text-decoration: underline;
@@ -1323,14 +1377,14 @@ guide
 }
 #guide h2 {
   font-size: 6vw;
-  color: #4052E3;
+  color: #00552e;
   margin-bottom: 5vw;
   font-weight: normal;
 }
 #guide h4{
   font-size: 5.5vw;
-  background: #ECEEFD;
-  color: #4052E3;
+  background: #E6FFE9;
+  color: #00552e;
   border-radius: 1vw;
   padding: 2vw 0 2vw 5vw;
   margin-bottom: 5vw;
@@ -1342,7 +1396,7 @@ guide
   margin-right: 4vw;
 }
 #guide #usage {
-  background: #ECEEFD;
+  background: #E6FFE9;
   padding: 7vw 0;
 }
 #guide #usage .in_usage{
@@ -1365,7 +1419,7 @@ guide
   margin-bottom: 5vw;
 }
 #guide #usage .step_box dl{
-  background: #4052E3;
+  background: #00552e;
   color: #fff;
   border-radius: 1vw;
   border:2px #fff solid;
@@ -1404,7 +1458,7 @@ guide
 }
 #guide .in_bdy h3{
   width: 48%;
-  background: #4052E3;
+  background: #00552e;
   color: #fff;
   border-radius: 1vw;
   margin-bottom: 3vw;
@@ -1436,7 +1490,7 @@ guide
 #guide .in_bdy .pay_nav li a{
   display: block;
   padding: 2vw 0;
-  border: 2px solid #4052E3;
+  border: 2px solid #00552e;
   border-radius: 1vw;
 }
 #guide .in_bdy .pay_nav li a:hover{
@@ -1484,7 +1538,7 @@ guide
   margin-bottom: 2vw;
 }
 #guide .contact_box{
-  background: #ECEEFD;
+  background: #E6FFE9;
   margin: 10vw auto 0;
   width: 100%;
   padding: 3vw;
@@ -1494,7 +1548,7 @@ guide
   font-weight: normal;
   font-size: 4.5vw;
   margin-bottom: 3vw;
-  color: #4052E3;
+  color: #00552e;
   text-align: center;
 }
 #guide .contact_box dl{
@@ -1502,12 +1556,12 @@ text-align: center;
 }
 #guide .contact_box dl dt{
   font-size: 8vw;
-  color: #4052E3;
+  color: #00552e;
   margin-bottom: 2vw;
 }
 #guide .contact_box dl dd{
   font-size: 3vw;
-  color: #4052E3;
+  color: #00552e;
   line-height: 1.4;
 }
 /*===========================
@@ -1622,4 +1676,776 @@ ticket
 }
 #ticket #ticket_sys .box .txt p{
   margin-bottom: 5vw;
+}
+
+
+/* 下記からhermes */
+@import url(https://fonts.googleapis.com/css?family=Nunito);
+
+/* 共通CSS */
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.header_hermes {
+    justify-content: space-between;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+}
+
+.header__logo_hermes {
+    font-size: 24px;
+}
+
+.header__cart_hermes {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    position: relative;
+}
+
+.cart__icon_hermes img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+
+.cart__count_hermes {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: red;
+    color: #fff;
+    height: 25px;
+    width: 25px;
+    z-index: 20;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+.container_hermes {
+    max-width: 900px;
+    margin: 50px auto;
+    /* padding: 0 40px; */
+}
+
+/* 検索フォームCSS */
+
+.body{
+  padding: 3%;
+}
+.orderable_hermes {
+    align-items: center;
+    max-width: 800px;
+    display: flex;
+}
+
+.orderable__head_hermes {
+    background: #00552e;
+    padding: 5px 10px;
+    margin-right: 10px;
+    border-radius: 50px;
+    color: white;
+    font-weight: bold;
+    /* width: 47%; */
+}
+
+.orderable__date_hermes {
+    color: #00552e;
+    font-weight: bold;
+    font-size: smaller;
+    padding-top: 5px;
+    /* padding-left: 10px; */
+}
+
+.search_hermes {
+    max-width: 800px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 40px auto;
+}
+
+.search__select_hermes {
+  border-radius: 0;
+  width: 210%;
+  border: 1px solid #00552e;
+  display: block;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.search__select_hermes {
+    border-radius: 0;
+    width: 100%;
+    border: 1px solid #00552e;
+    display: block;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.search__line_hermes {
+    /* width: 48%; */
+}
+.search__head_hermes{
+  padding-bottom: 3px;
+}
+
+.search__station_hermes {
+    display: flex;
+    justify-content: space-between;
+}
+
+.search__start_hermes {
+    width: 49%;
+}
+
+.search__arrival_hermes {
+    width: 49%;
+}
+
+.search__time_hermes {
+    margin-top: 15px;
+    /* width: 48%; */
+}
+
+.search__time-wrapper_hermes {
+    display: flex;
+}
+
+.search__date_hermes {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.search__hour_hermes {
+    width: 100%;
+}
+
+.search__count_hermes {
+    /* width: 49%; */
+    margin-top: 15px;
+}
+
+.search__count-wrapper_hermes {
+    
+    justify-content: space-between;
+}
+
+.search__count-block_hermes {
+    /* width: 49%; */
+    display: flex;
+    align-items: center;
+}
+
+.search__count-category_hermes {
+    width: 50%;
+   
+    line-height: 1.2;
+}
+
+.search__count-age_hermes {
+    font-size: 12px;
+}
+
+.search__count-select_hermes {
+    flex: 1;
+}
+
+.search__button_hermes {
+    width: 200px;
+    margin: 40px auto 0;
+    padding: 15px 40px;
+    background-color: #00552e;
+    color: white;
+    font-weight: bold;
+    border: none;
+    display: block;
+}
+
+.search__button_hermes:disabled {
+    background-color: #bbb;
+    cursor: not-allowed;
+}
+
+/* 検索結果表示用CSS */
+
+.search-info__hermes {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.seat-type__hermes {
+    font-size: 12px;
+    text-align: center;
+}
+
+.research_hermes {
+    display: flex;
+    justify-content: space-between;
+}
+
+.research__buttons_hermes {
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.research__button_hermes {
+    display: block;
+    padding: 5px 20px;
+    background-color: #3160AB;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.result_hermes {
+    margin-top: 50px;
+}
+
+.result__row_hermes {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.result__row_hermes+.result__row_hermes {
+    border-top: 1px solid rgb(112, 112, 112);
+}
+
+.result__name_hermes {
+    flex: 1;
+    font-weight: bold;
+}
+
+.result__time_hermes {
+    width: 160px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.maru-hermes {
+    width: 40px;
+    height: 30px;
+    background-color: #3160AB;
+    color: white;
+    font-weight: bold;
+    margin: 0 20px;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+}
+
+.sankaku-hermes {
+    width: 40px;
+    height: 30px;
+    background-color: #3160AB;
+    color: white;
+    font-weight: bold;
+    margin: 0 20px;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+}
+
+.batsu-hermes {
+    width: 40px;
+    height: 30px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    margin: 0 20px;
+    text-align: center;
+}
+
+.hyphen-hermes {
+    width: 40px;
+    height: 30px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    margin: 0 20px;
+    text-align: center;
+}
+
+/* カート表示用CSS */
+
+.cart__table_hermes {
+    border: 1px solid #bbb;
+}
+
+.cart__head_hermes {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: #ddd;
+}
+
+.cart__body_hermes {
+    display: flex;
+    border-top: 1px solid #bbb;
+}
+
+.cart__remove_hermes {
+    width: 70px;
+    text-align: center;
+}
+
+.cart__ticket_hermes {
+    flex: 1;
+    border-left: 1px solid #bbb;
+}
+
+.cart__unitPrice_hermes {
+    width: 150px;
+    border-left: 1px solid #bbb;
+}
+
+.cart__quantity_hermes {
+    width: 110px;
+    border-left: 1px solid #bbb;
+}
+
+.cart__total_hermes {
+    width: 110px;
+    border-left: 1px solid #bbb;
+}
+
+.cart__head_hermes .cart__remove_hermes {
+    height: 100%;
+}
+
+.cart__head_hermes .cart__ticket_hermes {
+    height: 100%;
+}
+
+.cart__head_hermes .cart__unitPrice_hermes {
+    height: 100%;
+}
+
+.cart__head_hermes .cart__quantity_hermes {
+    height: 100%;
+}
+
+.cart__head_hermes .cart__total_hermes {
+    height: 100%;
+}
+
+.cart__body_hermes .cart__remove_hermes {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: underline;
+    color: #3160AB;
+}
+
+.cart__body_hermes .cart__ticket_hermes {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.cart__body_hermes .cart__unitPrice_hermes {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.cart__body_hermes .cart__quantity_hermes {
+    padding: 10px;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    text-align: right;
+}
+
+.cart__body_hermes .cart__total_hermes {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.cart__price_hermes {
+    flex: 1;
+    background-color: #ddd;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    font-weight: bold;
+}
+
+.cart__link_hermes {
+    padding: 10px 20px;
+    background: #3160AB;
+    color: white;
+    font-weight: bold;
+    margin-top: 30px;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.cart__link_hermes+.cart__link_hermes {
+    margin-left: 30px;
+}
+
+/* ユーザー区分選択画面 */
+
+.category__link_hermes {
+    display: block;
+    background-color: #bbb;
+    font-weight: bold;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    width: 300px;
+    margin: 20px auto 0;
+    text-decoration: none;
+}
+
+.category__signin_hermes {
+    background-color: #3160AB;
+    display: block;
+    font-weight: bold;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    width: 300px;
+    margin: 20px auto 0;
+    text-decoration: none;
+}
+
+.category__login_hermes {
+    display: block;
+    background-color: #3160AB;
+    font-weight: bold;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    width: 300px;
+    margin: 20px auto 0;
+    border: none;
+}
+
+.category__block_hermes+.category__block_hermes {
+    margin-top: 40px;
+}
+
+.category__item_hermes {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.category__label_hermes {
+    width: 150px;
+}
+
+.category__input_hermes {
+    flex: 1;
+    max-width: 400px;
+}
+
+/* ユーザー情報入力画面 */
+.user__block_hermes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.user__block_hermes+.user__block_hermes {
+    margin-top: 20px;
+}
+
+.user__label_hermes {
+    width: 150px;
+    display: inline-block;
+}
+
+.user__inputBlock_hermes {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.user__input_hermes {
+    width: 100%;
+    padding: 5px 10px;
+}
+
+.user__inputName_hermes {
+    width: 48%;
+    display: block;
+    padding: 5px 10px;
+}
+
+.user__inputName_hermes+.user__inputName_hermes {
+    margin-left: 4%;
+}
+
+.user__inputPost_hermes {
+    margin: 0 10px;
+    width: 30%;
+    padding: 5px 10px;
+}
+
+.user__button_hermes {
+    display: block;
+    margin: 30px auto 0;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    background-color: #3160AB;
+    border: none;
+    cursor: pointer;
+}
+
+.user__button_hermes:disabled {
+    cursor: not-allowed;
+    background-color: #bbb;
+}
+
+.user__address_hermes {
+    display: block;
+    width: 100%;
+    flex: 1;
+}
+
+.user__address_hermes .user__label_hermes {
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+}
+
+.user__address_hermes .user__input_hermes {
+    margin-top: 10px;
+    display: block;
+}
+
+.user__error_hermes {
+    font-size: 12px;
+    color: red;
+}
+
+.require_hermes {
+    position: relative;
+}
+
+.require_hermes::after {
+    content: '*';
+    position: absolute;
+    transform: translateX(10px);
+    text-align: center;
+    color: red;
+}
+
+/* payment.html */
+.payment__item_hermes+.payment__item_hermes {
+    margin-top: 20px;
+}
+
+.payment__body_hermes {
+    display: block;
+}
+
+/* DatePicker用CSS */
+
+.is-sunday .ui-state-default,
+.is-holiday .ui-state-default {
+    background: #ffb6ce;
+    color: red;
+}
+
+.is-saturday .ui-state-default {
+    background: #7fc3ff;
+    color: blue;
+}
+
+/* ========== */
+
+.select__head_hermes {
+    background-color: #ddd;
+    padding: 10px 20px;
+    border-left: 4px solid #3160AB;
+    margin-bottom: 30px;
+}
+
+.select__block_hermes {
+    margin-left: 20px;
+}
+
+.select__sentType_hermes {
+    margin-top: 50px;
+}
+
+.select__body_hermes {
+    margin-left: 20px;
+    margin-bottom: 50px;
+}
+
+.select__button_hermes {
+    display: block;
+    margin: 30px auto 0;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    background-color: #3160AB;
+    border: none;
+    cursor: pointer;
+}
+
+.select__ticketName_hermes {
+    margin-top: 20px;
+}
+
+.select__position_hermes select {
+    margin-left: 30px;
+}
+
+.select__link_hermes {
+    display: block;
+    margin-left: 20px;
+}
+
+/* 確認画面 */
+.confirm__head_hermes {
+    background-color: #ddd;
+    padding: 10px 20px;
+    border-left: 4px solid #3160AB;
+    margin: 30px 0;
+}
+
+.confirm__body_hermes {
+    margin-left: 20px;
+}
+
+.confirm__userHead_hermes {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.confirm__userBody_hermes {
+    margin-left: 20px;
+}
+
+.confirm__back_hermes {
+    display: block;
+    text-align: right;
+    margin-top: 20px;
+}
+
+.confirm__button_hermes {
+    display: block;
+    margin: 30px auto 0;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    background-color: #3160AB;
+    border: none;
+    cursor: pointer;
+}
+
+.confirm__button_hermes:disabled {
+    background-color: #bbb;
+    cursor: not-allowed;
+}
+
+.confirm__paymentType_hermes {
+    margin-left: 20px;
+}
+
+
+/* 照会情報入力ページ */
+.inquiry__head_hermes {
+    background-color: #ddd;
+    padding: 10px 20px;
+    border-left: 4px solid #3160AB;
+    margin: 30px 0;
+}
+
+.inquiry__label_hermes {
+    margin-left: 20px;
+    width: 150px;
+}
+
+.inquiry__input_hermes {
+    width: 100%;
+    flex: 1;
+    margin-right: 20px;
+    padding: 5px 10px;
+}
+
+.inquiry__item_hermes {
+    display: flex;
+}
+
+.inquiry__item_hermes+.inquiry__item_hermes {
+    margin-top: 20px;
+}
+
+.inquiry__back_hermes {
+    display: block;
+    text-align: right;
+    margin-top: 20px;
+}
+
+#show,
+.inquiry__login_hermes {
+    display: block;
+    margin: 30px auto 0;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    background-color: #3160AB;
+    border: none;
+    cursor: pointer;
+}
+
+.inquiry__login_hermes:disabled {
+    background-color: #bbb;
+    cursor: not-allowed;
+}
+
+.inquiry__error_hermes {
+    color: red;
+    text-align: center;
+}
+
+.show__caution_hermes {
+    display: block;
+    font-size: 18px;
+    color: red;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.show__payment_hermes {
+    display: block;
+    padding: 10px 20px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #3160AB;
+    margin-top: 20px;
 }
