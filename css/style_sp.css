@@ -1564,6 +1564,9 @@ text-align: center;
   color: #00552e;
   line-height: 1.4;
 }
+.arrow_icon .pc{
+  display: none;
+}
 /*===========================
 
 ticket

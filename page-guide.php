@@ -42,11 +42,11 @@
                 <p class="mgb30">各検索条件を入力し、「検索する」ボタンを押します。</p>
                 <div class="pc"><img src="<?= get_template_directory_uri() ?>/img/guide_step1.png"></div>
                 <div class="sp"><img src="/blog/wp-content/uploads/2023/01/step1_01s.png"></div>
-                <div class="arrow"><img src="/blog/wp-content/uploads/2023/01/arrow_b.png"></div>
+                <div class="arrow"><img src="<?= get_template_directory_uri() ?>/img/arrow_downg.png"></div>
                 <p class="mgb30">希望の列車・時間を選びクリックしてカートに入れてください。</p>
                 <div class="pc"><img src="<?= get_template_directory_uri() ?>/img/guide_step2.png"></div>
                 <div class="sp"><img src="/blog/wp-content/uploads/2023/01/step1_02s.png"></div>
-                <div class="arrow"><img src="/blog/wp-content/uploads/2023/01/arrow_b.png"></div>
+                <div class="arrow"><img src="<?= get_template_directory_uri() ?>/img/arrow_downg.png"></div>
                 <p class="mgb30">カートに入ったチケットを確認後、よろしければ購入手続きへお進みください。</p>
                 <div class="pc"><img src="<?= get_template_directory_uri() ?>/img/guide_step3.png"></div>
                 <div class="sp"><img src="/blog/wp-content/uploads/2023/01/step1_03s.png"></div> <br><br><br>
@@ -54,19 +54,19 @@
                 <p class="mgb30">お客様情報を登録します。必要事項に漏れがないようご入力ください。</p>
                 <div class="pc"><img src="<?= get_template_directory_uri() ?>/img/guide_step4.png"></div>
                 <div class="sp"><img src="/blog/wp-content/uploads/2023/01/step1_04s.png"></div>
-                <div class="arrow"><img src="/blog/wp-content/uploads/2023/01/arrow_b.png"></div>
+                <div class="arrow"><img src="<?= get_template_directory_uri() ?>/img/arrow_downg.png"></div>
                 <p class="mgb30">続いて、お支払方法の指定をおこなってください。</p>
                 <div class="pc"><img src="<?= get_template_directory_uri() ?>/img/guide_step5.png"></div>
                 <div class="sp"><img src="/blog/wp-content/uploads/2023/01/step1_05s.png"></div>
-                <div class="arrow"><img src="/blog/wp-content/uploads/2023/01/arrow_b.png"></div>
+                <div class="arrow"><img src="<?= get_template_directory_uri() ?>/img/arrow_downg.png"></div>
                 <p class="mgb30">ご入力されました全ての項目をご確認いただき、よろしければ「注文する」ボタンを押してください。</p>
                 <div class="pc"><img src="<?= get_template_directory_uri() ?>/img/guide_step6.png"></div>
                 <div class="sp"><img src="/blog/wp-content/uploads/2023/01/step1_06s.png"></div>
-                <div class="arrow"><img src="/blog/wp-content/uploads/2023/01/arrow_b.png"></div>
+                <div class="arrow"><img src="<?= get_template_directory_uri() ?>/img/arrow_downg.png"></div>
                 <p class="mgb30">これで予約が完了しました。弊社からメールが届きますので、そちらをご確認ください。</p>
                 <div class="pc"><img src="/blog/wp-content/uploads/2023/01/step1_07.png"></div>
                 <div class="sp"><img src="/blog/wp-content/uploads/2023/01/step1_07s.png"></div>
-                <div class="arrow"><img src="/blog/wp-content/uploads/2023/01/arrow_b.png"></div>
+                <div class="arrow"><img src="<?= get_template_directory_uri() ?>/img/arrow_downg.png"></div>
                 <h2>⬛︎ お支払いのご案内</h2>
                 <h3><span>STEP 3</span>購入</h3>
                 <p class="mgb30">各支払い方法にしたがってお支払い下さい。<br>銀行・コンビニ支払いについての口座・支払い番号を弊社よりメールにてご案内致します。<br>メールをご確認の上、お支払い手続きお願い申し上げます。</p>
